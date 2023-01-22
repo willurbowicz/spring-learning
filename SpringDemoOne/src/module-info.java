@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author willu
- *
- */
-module SpringDemoOne {
-}
