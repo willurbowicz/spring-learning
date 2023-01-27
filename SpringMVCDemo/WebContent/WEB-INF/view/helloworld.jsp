@@ -11,7 +11,7 @@ Student name: ${param.studentName }
 
 <br><br>
 
-The massage: ${message}
+The message: ${message}
 
 </body>
 
