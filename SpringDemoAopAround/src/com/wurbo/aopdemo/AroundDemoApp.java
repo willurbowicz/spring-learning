@@ -1,10 +1,14 @@
 package com.wurbo.aopdemo;
 
+import java.util.logging.Logger;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.wurbo.aopdemo.service.TrafficFortuneService;
 
 public class AroundDemoApp {
+	
+	private static Logger myLogger = Logger.getLogger(AroundDemoApp.class.getName());
 
 	public static void main(String[] args) {
 
@@ -15,15 +19,15 @@ public class AroundDemoApp {
 		// get the bean from spring container
 		TrafficFortuneService theFortuneService = context.getBean("trafficFortuneService", TrafficFortuneService.class);
 		
-		System.out.println("\nMain Program: AroundDemoApp");
+		myLogger.info("\nMain Program: AroundDemoApp");
 		
-		System.out.println("Calling getFortune");
+		myLogger.info("Calling getFortune");
 		
 		String data = theFortuneService.getFortune();
 		
-		System.out.println("\nMy fortune is: " + data);
+		myLogger.info("\nMy fortune is: " + data);
 		
-		System.out.println("Finished");
+		myLogger.info("Finished");
 		
 		// close the context
 		context.close();
